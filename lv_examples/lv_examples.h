@@ -39,7 +39,8 @@ extern "C" {
 #include "src/lv_demo_stress/lv_demo_stress.h"
 #include "src/lv_demo_keypad_encoder/lv_demo_keypad_encoder.h"
 #include "src/lv_demo_printer/lv_demo_printer.h"
-
+//tyin add
+#include "src/tyin_demo/tyin_demo.h"
 /*********************
  *      DEFINES
  *********************/

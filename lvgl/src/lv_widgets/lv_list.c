@@ -747,6 +747,13 @@ static lv_res_t lv_list_signal(lv_obj_t * list, lv_signal_t sign, void * param)
             if(ext->act_sel_btn) {
                 lv_obj_t * btn_prev = lv_list_get_next_btn(list, ext->act_sel_btn);
                 if(btn_prev) lv_list_focus_btn(list, btn_prev);
+                //tyin add start.
+                //if it is the last btn, go to the first then.
+                if(!btn_prev) {
+                	lv_obj_t * btn_first = lv_list_get_next_btn(list, NULL);
+                	if(btn_first) lv_list_focus_btn(list, btn_first);
+                }
+                //tyin add end.
             }
             /*If there is no selected button the make the first selected*/
             else {

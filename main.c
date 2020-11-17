@@ -57,8 +57,14 @@ int main(int argc, char **argv)
   /*Initialize the HAL (display, input devices, tick) for LVGL*/
   hal_init();
 
-  lv_demo_widgets();
-//  lv_demo_printer();
+  //lv_demo_widgets();
+  //lv_demo_printer();
+
+#if 0
+  lv_demo_keypad_encoder();
+#else
+  tyin_demo();
+#endif
 
   while (1) {
     /* Periodically call the lv_task handler.
